@@ -1,0 +1,107 @@
+
+<section class="header">
+    <nav>
+
+        <a href="" routerLink="/dashboard">
+
+
+            <img src="../../assets/Images/BackBenchers.jpg" height="150px" width="150px" style="border-radius: 50%;"
+                alt="...">
+
+        </a>
+        <div class="nav-links" id="navLinks">
+
+            <div class="d-flex">
+                <ul>
+                    <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKING DETAILS</a></li>
+                    <li><a href="" routerLink="/room">ROOM DETAILS</a></li>
+                    <li><a href="" routerLink="/department">DEPARTMENT</a></li>
+                    <li><a href="" routerLink="/inventory">INVENTORY</a></li>
+                    <li><a href="" routerLink="/staff">STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="center" style="text-align: center;">
+    <h2 style="text-align: center;">[.....All Department Details.....]</h2>
+    <div class="d-flex">
+        <table class="table table-hover table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th>Department Id</th>
+                    <th>Department Name</th>
+                    <th>Description</th>
+                    <th>No Of Employees</th>
+                    <!-- <th>Action</th> -->
+        
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let department of department">
+                    <td>{{department.departmentID}}</td>
+                    <td>{{department.departmentName}}</td>
+                    <td>{{department.desc}}</td>
+                    <td>{{department.no_of_Emp}}</td>
+                    <!-- <td>
+                        <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                        (click)="onEditDept(data)">EDIT</button>
+                        <button class="btn btn-danger" type="button" type="button">DELETE</button>
+                    </td>           -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+
+    <button class="btn btn-success" type="button" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">Add Department Details</button>
+
+</section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Booking Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Department ID</label>
+                            <input type="text" formControlName="did" placeholder="Department ID" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Department Name</label>
+                            <input type="text" formControlName="dname" placeholder="Department Name" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Description</label>
+                            <input type="text" formControlName="desc" placeholder="Description" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">No Of Employees</label>
+                            <input type="text" formControlName="noe" placeholder="No of Employees" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                  
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal"(click)="addDeptto()">Add Details</button>
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>

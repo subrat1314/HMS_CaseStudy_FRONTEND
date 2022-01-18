@@ -1,0 +1,110 @@
+
+
+<section class="header">
+    <nav>
+
+        <a href="" routerLink="/dashboard">
+
+
+            <img src="../../assets/Images/BackBenchers.jpg" height="150px" width="150px" style="border-radius: 50%;"
+                alt="...">
+
+        </a>
+        <div class="nav-links" id="navLinks">
+
+            <div class="d-flex">
+                <ul>
+                    <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKING DETAILS</a></li>
+                    <li><a href="" routerLink="/room">ROOM DETAILS</a></li>
+                    <li><a href="" routerLink="/department">DEPARTMENT</a></li>
+                    <li><a href="" routerLink="/inventory">INVENTORY</a></li>
+                    <li><a href="" routerLink="/staff">STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="center" style="text-align: center;">
+    <h2 style="text-align: center;">[.....All Inventory Details.....]</h2>
+    <div class="d-flex">
+        <table class="table table-hover table-dark table-bordered" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>Inventory Id</th>
+                    <th>Inventory Name</th>
+                    <th>Inventory Stock</th>
+                    <th>Inventory Type</th>
+                    <!-- <th>Action</th> -->
+        
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let inventory of inventory">
+                    <td>{{inventory.inventoryId}}</td>
+                    <td>{{inventory.inventoryName}}</td>
+                    <td>{{inventory.inventoryStock}}</td>
+                    <td>{{inventory.invetoryType}}</td>
+                    <!-- <td>
+                        <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                        (click)="onEditDept(data)">EDIT</button>
+                        <button class="btn btn-danger" type="button" type="button">DELETE</button>
+                    </td>           -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+
+    <button class="btn btn-success" type="button" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">Add Inventory Details</button>
+
+</section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Inventory Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Inventory Id</label>
+                            <input type="text" formControlName="iid" placeholder="Inventory ID" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Inventory Name</label>
+                            <input type="text" formControlName="iname" placeholder="Inventory Name" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Inventory Stock</label>
+                            <input type="text" formControlName="istock" placeholder="Inventory Stock" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Inventory Type</label>
+                            <input type="text" formControlName="itype" placeholder="Inventory Type" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal"(click)="addinvto()">Add Details</button>
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+

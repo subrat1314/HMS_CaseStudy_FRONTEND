@@ -1,0 +1,76 @@
+
+<router-outlet></router-outlet> 
+<section class="header">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>HMS SignUp Page</h1>
+                    <h5>Get free membership</h5>
+                    <hr>
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+
+                    <div class="mb-3">
+                        <label class="form-label">Guest Id</label>
+                        <input formControlName="id" placeholder="Please enter your Id here" type="email"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"> Guest Name</label>
+                        <input formControlName="name" placeholder="Please enter your name here" type="email"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                        <input formControlName="mobile" placeholder="Kindly enter your mobile number"
+                            type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input formControlName="email" placeholder="Enter your Proper Email address" type="email"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input formControlName="password" placeholder="Enter your Correct Password." type="password"
+                            class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label class="form-label">Contact</label>
+                        <input formControlName="contact" placeholder="Please enter your contact number" type="email"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div> -->
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <input formControlName="gender" placeholder="Male/Female/Other" type="email"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Guest Address</label>
+                        <input formControlName="address" placeholder="Please enter your address here" type="email"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                </form>
+
+                <a routerLink="/login">Aleady a member ? Click here to login</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>

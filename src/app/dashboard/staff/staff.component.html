@@ -1,0 +1,188 @@
+
+
+
+<section class="header">
+    <nav>
+
+        <a href="" routerLink="/dashboard">
+
+
+            <img src="../../assets/Images/BackBenchers.jpg" height="150px" width="150px" style="border-radius: 50%;"
+                alt="...">
+
+        </a>
+        <div class="nav-links" id="navLinks">
+
+            <div class="d-flex">
+                <ul>
+                    <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKING DETAILS</a></li>
+                    <li><a href="" routerLink="/room">ROOM DETAILS</a></li>
+                    <li><a href="" routerLink="/department">DEPARTMENT</a></li>
+                    <li><a href="" routerLink="/inventory">INVENTORY</a></li>
+                    <li><a href="" routerLink="/staff">STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="center" style="text-align: center;">
+    <h2 style="text-align: center;">[.....All Staff Details.....]</h2>
+    <div class="d-flex">
+        <table class="table table-hover table-dark table-bordered" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>Staff Id</th>
+                    <th>Staff DepartMent Id</th>
+                    <th>Staff Name</th>
+                    <th>Staff Department Name</th>
+                    <th>Staff Email</th>
+                    <th>Staff Salary</th>
+                    <!-- <th>Action</th> -->
+        
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let staff of staff">
+                    <td>{{staff.empId}}</td>
+                    <td>{{staff.empDeptId}}</td>
+                    <td>{{staff.empName}}</td>
+                    <td>{{staff.empDeptName}}</td>
+                    <td>{{staff.email}}</td>
+                    <td>{{staff.empSalary}}</td>
+                    <!-- <td>
+                        <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                        (click)="onEditDept(data)">EDIT</button>
+                        <button class="btn btn-danger" type="button" type="button">DELETE</button>
+                    </td>           -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+       
+
+    <button class="btn btn-success" type="button" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">Add Staff Details</button>
+
+</section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Inventory Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="formValue">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Staff Id</label>
+                            <input type="text" formControlName="sid" placeholder="Enter your Staff ID" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Staff DepartMent Id</label>
+                            <input type="text" formControlName="sdid" placeholder="Enter Staff's Dept Id" class="form-control"
+                                id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Staff Name</label>
+                            <input type="text" formControlName="sname" placeholder="Staff Name" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Staff Department Name</label>
+                            <input type="text" formControlName="sdname" placeholder="Staff's Department Name" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Staff Email</label>
+                            <input type="text" formControlName="semail" placeholder="Email Id" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Staff Salary</label>
+                            <input type="text" formControlName="ssalary" placeholder="Staff Salary" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal"(click)="addstaffto()">Add Details</button>
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- <section class="header">
+    <nav>
+
+        <a href="" routerLink="/dashboard">
+
+
+            <img src="../../assets/Images/BackBenchers.jpg" height="150px" width="150px" style="border-radius: 50%;"
+                alt="...">
+
+        </a>
+        <div class="nav-links" id="navLinks">
+
+            <div class="d-flex">
+                <ul>
+                    <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKING DETAILS</a></li>
+                    <li><a href="" routerLink="/room">ROOM DETAILS</a></li>
+                    <li><a href="" routerLink="/department">DEPARTMENT</a></li>
+                    <li><a href="" routerLink="/inventory">INVENTORY</a></li>
+                    <li><a href="" routerLink="/staff">STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="center">
+
+        <h2>[.....All Staff Details.....]</h2>
+
+    </section>
+
+    
+
+
+    <table class="table table-hover table-dark table-bordered" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>empId</th>
+                <th>empDeptId</th>
+                <th>empName</th>
+                <th>empDeptName</th>
+                <th>email</th>
+                <th>empSalary</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let staff of staff">
+                <td>{{staff.empId}}</td>
+                <td>{{staff.empDeptId}}</td>
+                <td>{{staff.empName}}</td>
+                <td>{{staff.empDeptName}}</td>
+                <td>{{staff.email}}</td>
+                <td>{{staff.empSalary}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+</section> -->

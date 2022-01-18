@@ -1,0 +1,73 @@
+<!--  -->
+<section class="header">
+    <nav>
+
+        <!-- <a href="" routerLink="/home"> -->
+        <a href="" routerLink="/dashboard">
+
+
+            <img src="../../assets/Images/BackBenchers.jpg" height="150px" width="150px" style="border-radius: 50%;"
+                alt="...">
+
+        </a>
+        <div class="nav-links" id="navLinks">
+
+            <div class="d-flex">
+                <ul>
+                    <!-- <li><a href="" routerLink="/home">HOME</a></li>
+                    <li><a href="" routerLink="/gallary">GALLARY</a></li>
+                    <li><a href="" routerLink="/contactus">CONTACT US</a></li> -->
+                    <!-- <li><a href="" routerLink="/room">ROOMDETAILS</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKROOM</a></li> -->
+                    <!-- <a class="hero-btn" routerLink='/login'>LOGIN</a> -->
+                    <li><a href="" routerLink="/home">HOME</a></li>
+                    <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKING DETAILS</a></li>
+                    <li><a href="" routerLink="/room">ROOM DETAILS</a></li>
+                    <li><a href="" routerLink="/department">DEPARTMENT</a></li>
+                    <li><a href="" routerLink="/inventory">INVENTORY</a></li>
+                    <li><a href="" routerLink="/staff">STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="center">
+
+        <a class="hero-btn" routerLink='/reservation'>
+            <button class="btn btn-success" type="button">
+                <h2>BookRoom</h2>
+            </button>
+        </a>
+
+        <h2>[.....All Room Details.....]</h2>
+
+    </section>
+
+    <!-- table -->
+
+
+    <table class="table table-hover table-dark table-bordered" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Room Id</th>
+                <th>Room Charges</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Availability</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let room of rooms">
+                <td>{{room.roomId}}</td>
+                <td>{{room.roomCharges}}</td>
+                <td>{{room.roomType}}</td>
+                <td>{{room.roomDesc}}</td>
+                <!-- <td>{{room.roomAvl}}</td> -->
+                <td> <input type="checkbox" [checked]="room.roomAvl" disabled style="margin-left:50px;"></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</section>

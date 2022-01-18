@@ -1,0 +1,90 @@
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(63, 66, 66, 0.6),rgba(70, 72, 73, 0.6)), url("../../../assets/Images/roombookingjpg.jpg") ;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Georgia', cursive;
+  }
+  
+  .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
+    border-radius: 20px;
+    /* background:linear-gradient(#ddd6f3 , #faaca8) ;  */
+    background:linear-gradient(#121213 , #181717) ;
+    
+  }
+  
+  .nav-links ul li a:hover{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    background:linear-gradient(#000428 , #004e92) ; 
+  }
+  .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:linear-gradient(45deg,black,blue,red);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }
+  .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    position: relative;
+    cursor : grab;
+    font-family: 'Georgia', cursive;
+    border-radius: 20px;
+  }
+  
+  .hero-btn:hover{
+    transition: 1s;
+    color: white;
+    box-shadow: 0 0 20px darkturquoise;
+    background: #fccb90;
+    background: linear-gradient(to right, #25dd3e, #ad1214, #140b0f);
+  }
+nav div{
+    
+    text-align: center;
+}
+.center{
+    text-align: center;
+    font-size: 62px;
+    color: whitesmoke;
+    letter-spacing: 5px;
+  
+    font-family: 'Georgia', cursive;
+
+}
+.center h2
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold;
+  color: white;
+  font-size: 42px;
+  text-shadow: #dd3675;
+  font-style: italic;
+  text-decoration-style: dashed;
+  font-family: 'Copperplate', Fantasy;
+}

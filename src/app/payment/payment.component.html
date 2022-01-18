@@ -1,0 +1,72 @@
+<section class="header">
+<div class="container">
+    <h1>Confirm Your Payment</h1>
+    <div class="first-row">
+        <div class="owner">
+            <h5>Name</h5>
+            <div class="input-field">
+                <input type="text">
+            </div>
+        </div>
+        <div class="cvv">
+            <h5>CVV</h5>
+            <div class="input-field">
+                <input type="password">
+            </div>
+        </div>
+    </div>
+    <div class="second-row">
+        <div class="card-number">
+            <h5>Card Number</h5>
+            <div class="input-field">
+                <input type="text">
+            </div>
+        </div>
+    </div>
+    <div class="third-row">
+        <h5>Exp Date</h5>
+        <div class="selection">
+            <div class="date">
+                <select name="months" id="months">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                  </select>
+                  <select name="years" id="years">
+                    <option value="2020">2030</option>
+                    <option value="2020">2029</option>
+                    <option value="2020">2028</option>
+                    <option value="2020">2027</option>
+                    <option value="2020">2026</option>
+                    <option value="2020">2025</option>
+                    <option value="2020">2024</option>
+                    <option value="2020">2023</option>
+                    <option value="2020">2022</option>
+                    <option value="2020">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                  </select>
+            </div>
+            <div class="cards">
+                <img src="https://www.pngall.com/wp-content/uploads/2016/07/Mastercard-Download-PNG.png" alt="">
+                <img src="https://seeklogo.com/images/V/visa-logo-6F4057663D-seeklogo.com.png" alt="">
+                <img src="https://www.kindpng.com/picc/m/44-440826_chad-hurley-paypal-logo-hd-png-download.png" alt="">
+            </div>
+        </div>    
+    </div>
+    <a (click)="saveit()">Confirm</a>
+</div>
+</section>

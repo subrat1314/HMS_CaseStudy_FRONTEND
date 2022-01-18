@@ -1,0 +1,254 @@
+
+.header{
+  min-height: 100vh;
+  width:100%;
+  background-image: linear-gradient(rgba(63, 66, 66, 0.6),rgba(70, 72, 73, 0.6)), url("../../../assets/Images/inventory.jpg") ;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+  
+  nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Georgia', cursive;
+  }
+  
+  .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
+    border-radius: 20px;
+    /* background:linear-gradient(#ddd6f3 , #faaca8) ;  */
+    background:linear-gradient(#121213 , #181717) ;
+    
+  }
+  
+  .nav-links ul li a:hover{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    background:linear-gradient(#000428 , #004e92) ; 
+  }
+  
+  .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:linear-gradient(45deg,black,blue,red);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }
+  
+  .text-box{
+    width: 90%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+  
+  }
+  
+  .text-box h1{
+    font-size: 62px;
+    color: white;
+    letter-spacing: 10px;
+  
+    font-family: 'Copperplate', cursive;
+  }
+  
+  .text-box p{
+    font-family: 'Georgia', cursive;
+    margin: 40px 0 30px 0;
+    font-size: 40px;
+    color: white;
+    line-height: 50px;
+    color: white;
+    font-weight: bolder;
+  }
+  
+  .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    position: relative;
+    cursor : grab;
+    font-family: 'Georgia', cursive;
+    border-radius: 20px;
+  }
+  
+  .hero-btn:hover{
+    transition: 1s;
+    color: white;
+    box-shadow: 0 0 20px darkturquoise;
+    background: #fccb90;
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  }
+  /* .center{
+      text-align: center;
+      font-size: 62px;
+      color:white;
+      letter-spacing: 5px;
+      font-style: italic;
+      font-family: 'Georgia', cursive;
+  
+  } */
+.center h2
+{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-style: bold;
+color: white;
+font-size: 42px;
+text-shadow: #dd3675;
+font-style: italic;
+text-decoration-style: dashed;
+font-family: 'Copperplate', Fantasy;
+}
+button{
+  text-align: center;
+  font-size: 29px;
+  color:white;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-family: 'Georgia', cursive;
+  background: linear-gradient(45 deg,orange,green,blue);
+  color: white;
+  text-decoration: none;
+  background:linear-gradient(#7b4397 , #dc2430) ; 
+  box-shadow: aqua;
+}
+.modal fade{
+margin-left: 20px;
+}
+
+/* .header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(63, 66, 66, 0.6),rgba(70, 72, 73, 0.6)), url("../../../assets/Images/inventory.jpg") ;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+    
+    nav{
+      display: flex;
+      padding: 1% 6%;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Georgia', cursive;
+    }
+    
+    .nav-links ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 8px 15px;
+      position: relative;
+      border-radius: 20px;
+      /* background:linear-gradient(#ddd6f3 , #faaca8) ;  */
+      /* background:linear-gradient(#121213 , #181717) ;
+      
+    }
+    
+    .nav-links ul li a:hover{
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      background:linear-gradient(#000428 , #004e92) ; 
+    }
+    
+    .nav-links ul li::after{
+      content: '';
+      width: 0%;
+      height: 2px;
+      background:linear-gradient(45deg,black,blue,red);
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+    
+    .nav-links ul li:hover::after{
+      width: 100%;
+    }
+    
+    .text-box{
+      width: 90%;
+      position: absolute;
+      text-align: center;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+    
+    }
+    
+    .text-box h1{
+      font-size: 62px;
+      color: white;
+      letter-spacing: 10px;
+    
+      font-family: 'Copperplate', cursive;
+    }
+    
+    .text-box p{
+      font-family: 'Georgia', cursive;
+      margin: 40px 0 30px 0;
+      font-size: 40px;
+      color: white;
+      line-height: 50px;
+      color: white;
+      font-weight: bolder;
+    }
+    
+    .hero-btn{
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      font-size: 20px;
+      position: relative;
+      cursor : grab;
+      font-family: 'Georgia', cursive;
+      border-radius: 20px;
+    }
+    
+    .hero-btn:hover{
+      transition: 1s;
+      color: white;
+      box-shadow: 0 0 20px darkturquoise;
+      background: #fccb90;
+      background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+    .center{
+        text-align: center;
+        font-size: 62px;
+        color: white;
+        letter-spacing: 5px;
+        font-style: italic;
+        font-family: 'Georgia', cursive;
+    
+    }
+    .center h2
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold;
+  color: white;
+  font-size: 42px;
+  text-shadow: #dd3675;
+  font-style: italic;
+  text-decoration-style: dashed;
+  font-family: 'Copperplate', Fantasy;
+} */ 

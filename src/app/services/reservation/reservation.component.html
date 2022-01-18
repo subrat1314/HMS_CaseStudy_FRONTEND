@@ -1,0 +1,125 @@
+<section class="header">
+    <nav>
+
+
+        <a href="" routerLink="/home">
+
+            <img src="../../assets/Images/BackBenchers.jpg"
+                height="150px" width="150px" style="border-radius: 50%;" alt="...">
+
+        </a>
+        <div class="nav-links" id="navLinks">
+
+            <div class="d-flex">
+                <ul>
+                    <li><a href="" routerLink="/home">HOME</a></li>
+                    <li><a href="" routerLink="/dashboard">DASHBOARD</a></li>
+                    <li><a href="" routerLink="/reservation">BOOKING DETAILS</a></li>
+                    <li><a href="" routerLink="/room">ROOM DETAILS</a></li>
+                    <li><a href="" routerLink="/department">DEPARTMENT</a></li>
+                    <li><a href="" routerLink="/inventory">INVENTORY</a></li>
+                    <li><a href="" routerLink="/staff">STAFF</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--  -->
+    <section class="center">
+
+        <div>
+            <button class="btn btn-success" type="button" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">BookRoom</button>
+            <br>
+            <!-- <a href="" class="hero-btn" routerLink="/guest" style="font-size: 30px;">See Guest Details</a> -->
+            
+        </div>
+
+        <h2>[.....All Bookings Details.....]</h2>
+
+    </section>
+
+    <table class="table table-dark" style="text-align: center;">
+        <thead>
+            <tr>
+                <th scope="col">Booking ID</th>
+                <th scope="col">Room ID</th>
+                <th scope="col">check-in</th>
+                <th scope="col">check-out</th>
+                <th scope="col">No of Guests</th>
+                <th scope="col">Total Payment</th>
+                <th scope="col">Action</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservation of reservation">
+                <td>{{reservation.bookingId}}</td>
+                <td>{{reservation.roomId}}</td>
+                <td>{{reservation.checkin}}</td>
+                <td>{{reservation.checkout}}</td>
+                <td>{{reservation.numOfGuests}}</td>
+                <td>{{reservation.finalPrice}}</td>
+                <td>
+                    <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" (click)="onEditRes">EDIT</button>
+                </td>
+                
+
+            </tr>
+        </tbody>
+
+    </table>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Booking Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Booking id</label>
+                        <input type="text" formControlName="bookingid" placeholder="Booking Id" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Room id</label>
+                        <input type="text" formControlName="roomid" placeholder="Room Id" class="form-control"
+                            id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">check-in</label>
+                        <input type="text" formControlName="checkin" placeholder="CheckIn Date" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">check-out</label>
+                        <input type="text" formControlName="checkout" placeholder="CheckOut Date" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">No of Guests</label>
+                        <input type="text" formControlName="noofguest" placeholder="No of Guests" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Total Payment</label>
+                        <input type="text" formControlName="totalpayment" placeholder="Total Payment Details"
+                            class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <a href="" routerLink="/payment"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">PayNow</button></a>
+                <button type="button" class="btn btn-primary" (click)="addResto()">Add Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- data-bs-dismiss="modal" -->

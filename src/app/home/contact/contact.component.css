@@ -1,0 +1,170 @@
+.header{
+    min-height: 100vh;
+    width:100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url("../../../assets/Images/cb.jpg");
+    /* background-position:45% 65%; */
+    background-size: cover;
+  }
+  
+  nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+  }
+  
+  .nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
+    border-radius: 20px;
+    /* background:linear-gradient(#ddd6f3 , #faaca8) ;  */
+    background:linear-gradient(#121213 , #181717) ;
+    
+  }
+  
+  .nav-links ul li a:hover{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    background:linear-gradient(#000428 , #004e92) ; 
+  }
+  
+  .nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:linear-gradient(45deg,black,blue,red);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-links ul li:hover::after{
+    width: 100%;
+  }
+  
+  .text-box{
+    width: 90%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+  
+  }
+  
+  .text-box h1{
+    font-size: 62px;
+    color: white;
+    letter-spacing: 10px;
+  
+    font-family: 'Monoton', cursive;
+  }
+  
+  .text-box p{
+    font-family: 'Gruppo', cursive;
+    margin: 40px 0 30px 0;
+    font-size: 40px;
+    color: white;
+    line-height: 50px;
+    color: white;
+    font-weight: bolder;
+  }
+  
+  .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: none;
+    padding: 8px 20px;
+    font-size: 20px;
+    position: relative;
+    cursor : grab;
+    font-family: 'Monoton', cursive;
+    border-radius: 20px;
+    background:linear-gradient(#ddd6f3 , #faaca8) ;
+  }
+  
+  .hero-btn:hover{
+    transition: 1s;
+    color: white;
+    box-shadow: 0 0 20px darkturquoise;
+    background: #fccb90;
+    background: linear-gradient(to right, #25dd3e, #ad1214, #140b0f);
+  }
+  
+  
+  .mapping{
+    margin-top: 7%;
+    margin-left: 10%;
+    width: 80%;
+  }
+  
+  .contact-col{
+    width: 79%;
+    margin-left: 10.5%;
+    margin-bottom: 5%;
+    border: none;
+    padding: 4%;
+    background-color: lightcyan;
+    padding-left: 10%;
+  }
+  
+  .contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-col div .fa{
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+  }
+  
+  .contact-col div p{
+    padding: 0;
+    /*font-family: 'New Rocker', cursive;*/
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+  }
+  
+  .contact-col div h5{
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+    font-size: 50px;
+    /*font-family: 'New Rocker', cursive;*/
+    font-family: 'Arial', sans-serif;
+    /*font-family: 'Gruppo', cursive;*/
+    
+  }
+  
+  .contact-col div h6{
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+    font-size: 50px;
+    /*font-family: 'Times New Roman', Serif;*/
+    font-style: oblique;
+    font-family: 'Copperplate', Fantasy;
+    
+  }
+  
+  .contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  
+  

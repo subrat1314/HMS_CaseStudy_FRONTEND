@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "signup": [
+    {
+      "id": "1",
+      "name": "Subrat Sahu",
+      "mobile": "9876583572",
+      "email": "sks123@gmail.com",
+      "password": "12345",
+      "gender": "m",
+      "address": "odisha"
+    },
+    {
+      "id": "11",
+      "name": "abc",
+      "mobile": "1234567543",
+      "email": "sks123@gmail.com",
+      "password": "12345",
+      "gender": "m",
+      "address": "iuc"
+    },
+    {
+      "id": "12",
+      "name": "abc",
+      "mobile": "123456889",
+      "email": "hhh@gmail.com",
+      "password": "xyz",
+      "gender": "female",
+      "address": "odisha"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
